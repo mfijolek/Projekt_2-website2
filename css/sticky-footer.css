@@ -1,0 +1,13 @@
+
+.footer {
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer div p {
+  margin-top:1.2em;
+}
