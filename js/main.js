@@ -1,8 +1,9 @@
+var load_data = function(){
 $.ajax("./api.php/elements_table/", {
 	dataType: 'json',
 	type: 'GET',
 	success: function(data){
-		console.log(data.length == 2);
+		// console.log(data.length > 1);
 		if(data.length>1){
 			var elements_1 = $.map(data, function(data1, index){
 				// console.log(data1.id);
@@ -13,9 +14,9 @@ $.ajax("./api.php/elements_table/", {
 		else{
 			$('.dane_1').html('<tr><td scope="row">'+data.id+'</td><td>'+data.name+'</td><td>'+data.description+'</td><td><a href="#">El2</a></td></tr>');
 		}
-		
+		return data;
 	},
 	contentType: 'application/json'
 });
-
-								
+};
+load_data();
