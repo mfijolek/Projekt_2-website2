@@ -1,5 +1,5 @@
 var load_data = function(){
-$.ajax("./api.php/elements_table/", {
+return $.ajax("./api.php/elements_table/", {
 	dataType: 'json',
 	type: 'GET',
 	success: function(data){
@@ -14,9 +14,21 @@ $.ajax("./api.php/elements_table/", {
 		else{
 			$('.dane_1').html('<tr><td scope="row">'+data.id+'</td><td>'+data.name+'</td><td>'+data.description+'</td><td><a href="#">El2</a></td></tr>');
 		}
-		return data;
+		
 	},
 	contentType: 'application/json'
 });
+
 };
-load_data();
+var data_el = load_data();
+
+
+$('#search_input').on('submit', function(event){
+	var zmienna;
+	event.preventDefault();
+		console.log(data_el.responseText);
+	var to_find = $(this).find('input').val();
+		console.log(to_find);
+	console.log($.inArray(to_find, data_el.responseText));
+	// poprawić wyszukiwanie 
+});
