@@ -15,48 +15,29 @@
 					<div class="navbar-header">
 						<a class="navbar-brand" href="index.html">Test</a>
 					</div>
-					<form class="navbar-form navbar-left" id="search_input">
+<!-- 					<form class="navbar-form navbar-left" id="search_input">
 						<div class="form-group">
 							<input type="text" name="search" class="form-control" placeholder="Wyszukaj element">
 						</div>
 						<button type="submit" class="btn btn-default">Wyszukaj</button>
-					</form>
+					</form> -->
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="karta.html">Karta</a></li>
-						<li><a href="logowanie.html">Logowanie</a></li>
+						<li><a href="karta.html">Karta</a></li>
+						<li class="active"><a href="#">Logowanie</a></li>
 					</ul>					
 				</div>
 			</nav>
 		<div class="container" style="">	
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-				<ol class="breadcrumb">
-				  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-				  <li class="breadcrumb-item active">Karta</li>
-				</ol>
-				<p class="text-center">Elementy</p>
-					<div class="table-responsive" style="margin-bottom: 10%;">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Nazwa</th>
-									<th>Opis</th>
-									<th>Opcje</th>
-								</tr>
-							</thead>
-							<tbody class="dane_1" >
-								<!-- <tr>
-									<td scope="row">1</td>
-									<td id="cell1">El1</td>
-									<td><a href="#" id="cell2">El2</a></td>
-								</tr> -->
-							</tbody>
 
-						</table>
-					</div>
-				</div>
-			</div>
+				<form class="form-signin" id="login_form">
+					<h2 class="form-signin-heading">Proszę sie zalogować</h2>
+					<input type="text" name="login" class="form-control" placeholder="Login" id="inputLogin" required autofocus>
+					<label for="inputLogin" class="sr-only">Email address</label>
+					<input type="password" name="password" class="form-control" placeholder="Hasło" id="inputPassword">
+					<label for="inputPassword" class="sr-only">Password</label>
+					<button type="submit" class="btn btn-lg btn-primary btn-block">Zaloguj</button>
+				</form>
+
 		</div>
 
 	    <footer class="footer" >

@@ -2,9 +2,10 @@ $( document ).ready(function() {
 
 	var drowAllElements = function(data){
 		if(data.length>1){
+			var temp = 0;
 			var elements_1 = $.map(data, function(data1, index){
 				// console.log(data1.id);
-				return $('<tr scope="row"><td>'+data1.id+'</td><td>'+data1.name+'</td><td>'+data1.description+'</td><td><a href="#">El2</a></td></tr>');
+				return $('<tr scope="row"><td>'+data1.id+'</td><td>'+data1.name+'</td><td>'+data1.description+'</td><td><a href="#">El2</a></td></tr>');	
 			});
 			$('.dane_1').html(elements_1);
 		}
