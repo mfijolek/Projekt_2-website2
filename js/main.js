@@ -47,13 +47,13 @@ $( document ).ready(function() {
 	   return result;
 	};
 
-	//wyszukiwarka znaków w stringu
+	//wyszukiwarka znaków w stringu , name i description
 	var findItem2 = function(term) {
 		var result =[];
 	   if($.isArray(array_data)){
 		   $.map(array_data, function(data, index){
 		   		
-		   		if(data.name.indexOf(term) !== (-1)){
+		   		if(data.name.indexOf(term) !== (-1) || data.description.indexOf(term) !== (-1) ){
 		   			result.push(data);
 		   		} else {		   				
 		   		}
