@@ -37,30 +37,39 @@ $( document ).ready(function() {
 		   $.map(array_data, function(data, index){
 		   		if(term == data.name) { 		   			
 		   			//console.log('id = ' + data.id + ', name = ' + data.name );
-		   			result.push(data)		   			
+		   			result.push(data);		   			
 		   		} else{			
 		   		}
 		   });
 	   } else {
 	   		console.log("it's not an array");
 	   }
-	   console.log(result);
 	   return result;
 	};
 
+	//wyszukiwarka znaków w stringu
 	var findItem2 = function(term) {
 		var result =[];
-
+	   if($.isArray(array_data)){
+		   $.map(array_data, function(data, index){
+		   		
+		   		if(data.name.indexOf(term) !== (-1)){
+		   			result.push(data);
+		   		} else {		   				
+		   		}
+		   });
+	   } else {
+	   		console.log("it's not an array");
+	   }
+	   return result;
 	};
 
+	//click on - search activity
 	$('#search_input').on('submit', function(event){
 		event.preventDefault();
 		var to_find = $(this).find('input').val();
-		console.log("to_find = "+to_find.length);
 		if(to_find.length !== 0){
-			result=findItem(to_find);
-			console.log('in array = ' + result);
-			console.log('result.length = ' + result.length);
+			result=findItem2(to_find);
 			if(result.length == 0 || result.length == null){
 				$('.dane_1').html('<tr scope="row"><td>Brak wyników</td></tr>');
 			} else{
