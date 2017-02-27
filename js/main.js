@@ -13,9 +13,10 @@ $( document ).ready(function() {
 			$('.dane_1').html('<tr scope="row"><td>'+data.id+'</td><td>'+data.name+'</td><td>'+data.description+'</td><td><a href="#">El2</a></td></tr>');
 		}		
 	};
+
 	//load data with ajax
 	var load_data = function(){
-		return $.ajax("./api.php/elements_table/", {
+		return $.ajax("./api/api.php/elements_table/", {
 			dataType: 'json',
 			type: 'GET',
 			async: !1,
