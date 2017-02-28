@@ -17,14 +17,14 @@ $( document ).ready(function() {
 	//load data with ajax
 	var load_data = function(){
 		return $.ajax("./api/api.php/elements_table/", {
-			dataType: 'json',
+			 dataType: 'json',
 			type: 'GET',
 			async: !1,
+			 contentType: 'application/json',
 			success: function(data){
 				// console.log(data.length > 1);
 				drowAllElements(data);		
 			},
-			contentType: 'application/json'
 		});
 	
 	};
